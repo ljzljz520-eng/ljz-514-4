@@ -1,0 +1,408 @@
+{
+  "nodes": [
+    {
+      "id": "gate_main",
+      "name": "正门",
+      "kind": "gate",
+      "x": 0,
+      "y": 0,
+      "visit_minutes": 0,
+      "shows": []
+    },
+    {
+      "id": "gate_east",
+      "name": "东门",
+      "kind": "gate",
+      "x": 900,
+      "y": 0,
+      "visit_minutes": 0,
+      "shows": []
+    },
+    {
+      "id": "j1",
+      "name": "路口1",
+      "kind": "junction",
+      "x": 180,
+      "y": 0,
+      "visit_minutes": 0,
+      "shows": []
+    },
+    {
+      "id": "j2",
+      "name": "路口2",
+      "kind": "junction",
+      "x": 400,
+      "y": 0,
+      "visit_minutes": 0,
+      "shows": []
+    },
+    {
+      "id": "j3",
+      "name": "路口3",
+      "kind": "junction",
+      "x": 620,
+      "y": 0,
+      "visit_minutes": 0,
+      "shows": []
+    },
+    {
+      "id": "j4",
+      "name": "路口4",
+      "kind": "junction",
+      "x": 180,
+      "y": 240,
+      "visit_minutes": 0,
+      "shows": []
+    },
+    {
+      "id": "j5",
+      "name": "路口5",
+      "kind": "junction",
+      "x": 400,
+      "y": 240,
+      "visit_minutes": 0,
+      "shows": []
+    },
+    {
+      "id": "j6",
+      "name": "路口6",
+      "kind": "junction",
+      "x": 620,
+      "y": 240,
+      "visit_minutes": 0,
+      "shows": []
+    },
+    {
+      "id": "j7",
+      "name": "路口7",
+      "kind": "junction",
+      "x": 400,
+      "y": 500,
+      "visit_minutes": 0,
+      "shows": []
+    },
+    {
+      "id": "panda",
+      "name": "熊猫馆",
+      "kind": "animal",
+      "x": 200,
+      "y": 320,
+      "visit_minutes": 35,
+      "shows": [
+        {
+          "start": "09:30",
+          "duration_min": 20,
+          "title": "熊猫喂食秀"
+        },
+        {
+          "start": "11:00",
+          "duration_min": 20,
+          "title": "熊猫喂食秀"
+        },
+        {
+          "start": "14:00",
+          "duration_min": 20,
+          "title": "熊猫喂食秀"
+        }
+      ]
+    },
+    {
+      "id": "tiger",
+      "name": "猛兽谷",
+      "kind": "animal",
+      "x": 720,
+      "y": 320,
+      "visit_minutes": 30,
+      "shows": [
+        {
+          "start": "10:00",
+          "duration_min": 20,
+          "title": "猛虎投喂"
+        },
+        {
+          "start": "11:30",
+          "duration_min": 20,
+          "title": "猛虎投喂"
+        }
+      ]
+    },
+    {
+      "id": "giraffe",
+      "name": "长颈鹿园",
+      "kind": "animal",
+      "x": 150,
+      "y": 500,
+      "visit_minutes": 25,
+      "shows": [
+        {
+          "start": "10:15",
+          "duration_min": 15,
+          "title": "长颈鹿讲解"
+        }
+      ]
+    },
+    {
+      "id": "elephant",
+      "name": "大象馆",
+      "kind": "animal",
+      "x": 700,
+      "y": 520,
+      "visit_minutes": 30,
+      "shows": [
+        {
+          "start": "13:30",
+          "duration_min": 20,
+          "title": "大象行为展示"
+        }
+      ]
+    },
+    {
+      "id": "penguin",
+      "name": "企鹅馆",
+      "kind": "animal",
+      "x": 400,
+      "y": 620,
+      "visit_minutes": 25,
+      "shows": [
+        {
+          "start": "10:45",
+          "duration_min": 15,
+          "title": "企鹅巡游"
+        },
+        {
+          "start": "13:00",
+          "duration_min": 15,
+          "title": "企鹅巡游"
+        }
+      ]
+    },
+    {
+      "id": "monkey",
+      "name": "猴山",
+      "kind": "animal",
+      "x": 200,
+      "y": 640,
+      "visit_minutes": 25,
+      "shows": []
+    },
+    {
+      "id": "aquarium",
+      "name": "海洋剧场",
+      "kind": "animal",
+      "x": 600,
+      "y": 640,
+      "visit_minutes": 30,
+      "shows": [
+        {
+          "start": "12:30",
+          "duration_min": 25,
+          "title": "海豚表演"
+        }
+      ]
+    },
+    {
+      "id": "rest_lake",
+      "name": "湖畔餐厅",
+      "kind": "restaurant",
+      "x": 400,
+      "y": 330,
+      "visit_minutes": 0,
+      "shows": []
+    },
+    {
+      "id": "rest_forest",
+      "name": "森林餐厅",
+      "kind": "restaurant",
+      "x": 160,
+      "y": 380,
+      "visit_minutes": 0,
+      "shows": []
+    }
+  ],
+  "edges": [
+    {
+      "a": "gate_main",
+      "b": "j1",
+      "distance_m": 180,
+      "slope_pct": 0,
+      "stroller_friendly": true,
+      "congestion": 0.2
+    },
+    {
+      "a": "j1",
+      "b": "j2",
+      "distance_m": 220,
+      "slope_pct": 1,
+      "stroller_friendly": true,
+      "congestion": 0.2
+    },
+    {
+      "a": "j2",
+      "b": "j3",
+      "distance_m": 220,
+      "slope_pct": 1,
+      "stroller_friendly": true,
+      "congestion": 0.3
+    },
+    {
+      "a": "j3",
+      "b": "gate_east",
+      "distance_m": 180,
+      "slope_pct": 0,
+      "stroller_friendly": true,
+      "congestion": 0.2
+    },
+    {
+      "a": "j1",
+      "b": "j4",
+      "distance_m": 240,
+      "slope_pct": 2,
+      "stroller_friendly": true,
+      "congestion": 0.1
+    },
+    {
+      "a": "j2",
+      "b": "j5",
+      "distance_m": 240,
+      "slope_pct": 2,
+      "stroller_friendly": true,
+      "congestion": 0.2
+    },
+    {
+      "a": "j3",
+      "b": "j6",
+      "distance_m": 240,
+      "slope_pct": 3,
+      "stroller_friendly": true,
+      "congestion": 0.2
+    },
+    {
+      "a": "j4",
+      "b": "panda",
+      "distance_m": 120,
+      "slope_pct": 1,
+      "stroller_friendly": true,
+      "congestion": 0.3
+    },
+    {
+      "a": "j4",
+      "b": "giraffe",
+      "distance_m": 260,
+      "slope_pct": 4,
+      "stroller_friendly": true,
+      "congestion": 0.1
+    },
+    {
+      "a": "j4",
+      "b": "j5",
+      "distance_m": 230,
+      "slope_pct": 1,
+      "stroller_friendly": true,
+      "congestion": 0.2
+    },
+    {
+      "a": "j5",
+      "b": "j6",
+      "distance_m": 230,
+      "slope_pct": 2,
+      "stroller_friendly": true,
+      "congestion": 0.3
+    },
+    {
+      "a": "j5",
+      "b": "rest_lake",
+      "distance_m": 90,
+      "slope_pct": 0,
+      "stroller_friendly": true,
+      "congestion": 0.4
+    },
+    {
+      "a": "j6",
+      "b": "tiger",
+      "distance_m": 110,
+      "slope_pct": 2,
+      "stroller_friendly": true,
+      "congestion": 0.3
+    },
+    {
+      "a": "j5",
+      "b": "j7",
+      "distance_m": 260,
+      "slope_pct": 3,
+      "stroller_friendly": true,
+      "congestion": 0.2
+    },
+    {
+      "a": "j6",
+      "b": "elephant",
+      "distance_m": 240,
+      "slope_pct": 4,
+      "stroller_friendly": true,
+      "congestion": 0.2
+    },
+    {
+      "a": "j7",
+      "b": "penguin",
+      "distance_m": 170,
+      "slope_pct": 2,
+      "stroller_friendly": true,
+      "congestion": 0.3
+    },
+    {
+      "a": "j7",
+      "b": "monkey",
+      "distance_m": 190,
+      "slope_pct": 5,
+      "stroller_friendly": false,
+      "congestion": 0.1
+    },
+    {
+      "a": "j7",
+      "b": "elephant",
+      "distance_m": 300,
+      "slope_pct": 6,
+      "stroller_friendly": true,
+      "congestion": 0.1
+    },
+    {
+      "a": "giraffe",
+      "b": "rest_forest",
+      "distance_m": 80,
+      "slope_pct": 1,
+      "stroller_friendly": true,
+      "congestion": 0.2
+    },
+    {
+      "a": "rest_forest",
+      "b": "monkey",
+      "distance_m": 230,
+      "slope_pct": 3,
+      "stroller_friendly": true,
+      "congestion": 0.1
+    },
+    {
+      "a": "penguin",
+      "b": "aquarium",
+      "distance_m": 160,
+      "slope_pct": 1,
+      "stroller_friendly": true,
+      "congestion": 0.3
+    },
+    {
+      "a": "aquarium",
+      "b": "elephant",
+      "distance_m": 150,
+      "slope_pct": 2,
+      "stroller_friendly": true,
+      "congestion": 0.2
+    },
+    {
+      "a": "j2",
+      "b": "j7",
+      "distance_m": 320,
+      "slope_pct": 12,
+      "stroller_friendly": false,
+      "congestion": 0.0
+    }
+  ]
+}
