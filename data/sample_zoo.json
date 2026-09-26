@@ -1,0 +1,372 @@
+{
+  "name": "城市动物园",
+  "nodes": [
+    {
+      "id": "N0",
+      "name": "中央广场",
+      "type": "junction",
+      "congestion": "normal",
+      "can_enter": true,
+      "can_exit": true,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "N1",
+      "name": "北门",
+      "type": "entrance",
+      "congestion": "normal",
+      "can_enter": true,
+      "can_exit": true,
+      "x": -120,
+      "y": 260
+    },
+    {
+      "id": "N2",
+      "name": "南门",
+      "type": "exit",
+      "congestion": "normal",
+      "can_enter": true,
+      "can_exit": true,
+      "x": -120,
+      "y": -300
+    },
+    {
+      "id": "A1",
+      "name": "熊猫馆",
+      "type": "animal",
+      "congestion": "normal",
+      "can_enter": true,
+      "can_exit": true,
+      "x": 240,
+      "y": 300,
+      "shows": [
+        {
+          "name": "熊猫喂食",
+          "start": "09:30",
+          "duration": 20
+        }
+      ]
+    },
+    {
+      "id": "A2",
+      "name": "狮虎山",
+      "type": "animal",
+      "congestion": "normal",
+      "can_enter": true,
+      "can_exit": true,
+      "x": 520,
+      "y": 300,
+      "shows": [
+        {
+          "name": "猛兽喂食",
+          "start": "10:15",
+          "duration": 20
+        }
+      ]
+    },
+    {
+      "id": "A3",
+      "name": "大象馆",
+      "type": "animal",
+      "congestion": "normal",
+      "can_enter": true,
+      "can_exit": true,
+      "x": 200,
+      "y": 0,
+      "shows": [
+        {
+          "name": "大象洗澡",
+          "start": "10:30",
+          "duration": 25
+        }
+      ]
+    },
+    {
+      "id": "A4",
+      "name": "企鹅馆",
+      "type": "animal",
+      "congestion": "normal",
+      "can_enter": true,
+      "can_exit": true,
+      "x": 720,
+      "y": 220,
+      "shows": [
+        {
+          "name": "企鹅巡游",
+          "start": "11:15",
+          "duration": 20
+        }
+      ]
+    },
+    {
+      "id": "A5",
+      "name": "灵长动物区",
+      "type": "animal",
+      "congestion": "normal",
+      "can_enter": true,
+      "can_exit": true,
+      "x": 360,
+      "y": -180,
+      "shows": [
+        {
+          "name": "金丝猴投食",
+          "start": "11:00",
+          "duration": 20
+        }
+      ]
+    },
+    {
+      "id": "A6",
+      "name": "热带鸟林",
+      "type": "animal",
+      "congestion": "normal",
+      "can_enter": true,
+      "can_exit": true,
+      "x": 700,
+      "y": -60,
+      "shows": [
+        {
+          "name": "鹦鹉飞行秀",
+          "start": "11:45",
+          "duration": 25
+        }
+      ]
+    },
+    {
+      "id": "A7",
+      "name": "儿童动物园",
+      "type": "animal",
+      "congestion": "normal",
+      "can_enter": true,
+      "can_exit": true,
+      "x": 120,
+      "y": -300,
+      "shows": [
+        {
+          "name": "小羊互动",
+          "start": "10:00",
+          "duration": 20
+        }
+      ]
+    },
+    {
+      "id": "L1",
+      "name": "雨林餐厅",
+      "type": "lunch",
+      "congestion": "high",
+      "can_enter": true,
+      "can_exit": true,
+      "x": 540,
+      "y": -40
+    },
+    {
+      "id": "L2",
+      "name": "便利店简餐",
+      "type": "lunch",
+      "congestion": "normal",
+      "can_enter": true,
+      "can_exit": true,
+      "x": -40,
+      "y": -300
+    }
+  ],
+  "edges": [
+    {
+      "a": "N1",
+      "b": "N0",
+      "distance": 300,
+      "slope": 2,
+      "stroller_ok": true,
+      "congestion": "normal"
+    },
+    {
+      "a": "A1",
+      "b": "N0",
+      "distance": 220,
+      "slope": 0,
+      "stroller_ok": false,
+      "congestion": "normal",
+      "name": "石阶捷径",
+      "has_steps": true
+    },
+    {
+      "a": "N0",
+      "b": "A3",
+      "distance": 220,
+      "slope": 0,
+      "stroller_ok": true,
+      "congestion": "high"
+    },
+    {
+      "a": "N0",
+      "b": "L2",
+      "distance": 320,
+      "slope": 2,
+      "stroller_ok": true,
+      "congestion": "normal"
+    },
+    {
+      "a": "N0",
+      "b": "N2",
+      "distance": 360,
+      "slope": 0,
+      "stroller_ok": true,
+      "congestion": "high"
+    },
+    {
+      "a": "N0",
+      "b": "A5",
+      "distance": 400,
+      "slope": 0,
+      "stroller_ok": true,
+      "congestion": "normal"
+    },
+    {
+      "a": "N1",
+      "b": "A1",
+      "distance": 360,
+      "slope": 4,
+      "stroller_ok": true,
+      "congestion": "normal"
+    },
+    {
+      "a": "A2",
+      "b": "N1",
+      "distance": 640,
+      "slope": 14,
+      "stroller_ok": false,
+      "congestion": "low",
+      "name": "北环山坡路"
+    },
+    {
+      "a": "N2",
+      "b": "L2",
+      "distance": 120,
+      "slope": 0,
+      "stroller_ok": true,
+      "congestion": "normal"
+    },
+    {
+      "a": "N2",
+      "b": "A7",
+      "distance": 260,
+      "slope": 1,
+      "stroller_ok": true,
+      "congestion": "normal"
+    },
+    {
+      "a": "A1",
+      "b": "A2",
+      "distance": 300,
+      "slope": 12,
+      "stroller_ok": false,
+      "congestion": "normal"
+    },
+    {
+      "a": "A1",
+      "b": "A3",
+      "distance": 280,
+      "slope": 3,
+      "stroller_ok": true,
+      "congestion": "normal"
+    },
+    {
+      "a": "A2",
+      "b": "A4",
+      "distance": 240,
+      "slope": 4,
+      "stroller_ok": true,
+      "congestion": "normal"
+    },
+    {
+      "a": "A2",
+      "b": "L1",
+      "distance": 420,
+      "slope": 3,
+      "stroller_ok": true,
+      "congestion": "normal"
+    },
+    {
+      "a": "A7",
+      "b": "A3",
+      "distance": 320,
+      "slope": 2,
+      "stroller_ok": true,
+      "congestion": "normal"
+    },
+    {
+      "a": "A3",
+      "b": "A5",
+      "distance": 300,
+      "slope": 2,
+      "stroller_ok": true,
+      "congestion": "normal"
+    },
+    {
+      "a": "A3",
+      "b": "L1",
+      "distance": 400,
+      "slope": 2,
+      "stroller_ok": true,
+      "congestion": "normal"
+    },
+    {
+      "a": "A6",
+      "b": "A4",
+      "distance": 300,
+      "slope": 4,
+      "stroller_ok": true,
+      "congestion": "normal"
+    },
+    {
+      "a": "A4",
+      "b": "L1",
+      "distance": 480,
+      "slope": 3,
+      "stroller_ok": true,
+      "congestion": "low"
+    },
+    {
+      "a": "A7",
+      "b": "A5",
+      "distance": 300,
+      "slope": 3,
+      "stroller_ok": true,
+      "congestion": "normal"
+    },
+    {
+      "a": "A5",
+      "b": "L1",
+      "distance": 220,
+      "slope": 0,
+      "stroller_ok": true,
+      "congestion": "high",
+      "name": "餐厅路"
+    },
+    {
+      "a": "A5",
+      "b": "A6",
+      "distance": 360,
+      "slope": 2,
+      "stroller_ok": true,
+      "congestion": "normal"
+    },
+    {
+      "a": "L1",
+      "b": "A6",
+      "distance": 180,
+      "slope": 1,
+      "stroller_ok": true,
+      "congestion": "normal"
+    },
+    {
+      "a": "L2",
+      "b": "A7",
+      "distance": 200,
+      "slope": 0,
+      "stroller_ok": true,
+      "congestion": "normal"
+    }
+  ]
+}
